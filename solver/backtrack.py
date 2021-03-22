@@ -51,7 +51,11 @@ def sudoku_solver(grid, N):
         if len(tmp) != N:
             raise Exception()
     # calling main recursion solver
-    return recursion_solver(grid, N, 0, 0)
+    val = recursion_solver(grid, N, 0, 0)
+    if val == True:
+        return grid
+    else:
+        return None
 
 # tesing the sudoku_solver function here
 # it worked out
