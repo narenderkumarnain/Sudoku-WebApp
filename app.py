@@ -37,4 +37,4 @@ def upload_file_1():
 		return render_template('result.html' , table = list_to_table(grid) , result = message)
 
 if __name__ == '__main__':
-	app.run(debug = True)
+	app.run()
