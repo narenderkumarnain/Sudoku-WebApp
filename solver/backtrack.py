@@ -1,10 +1,10 @@
 # BackTracking based Sudoku Solver
-# May 16, 2021 22:40 IST
+# Jan 16, 2021 22:40 IST
 # Author: @narenderkumarnain
 
 import math
 
-
+# -------------------------------- Functions for Backtracking Sudoku Grid ----------------------------------------------
 def CanPlace(grid, N, i, j, n):
     # can we place the number n in this cell ?
     for k in range(N):
@@ -57,6 +57,7 @@ def sudoku_solver(grid, N):
     else:
         return None
 
+# -------------------------------------------- Testing the code --------------------------------------------------------
 # tesing the sudoku_solver function here
 # it worked out
 # grid = [ [3, 0, 6, 5, 0, 8, 4, 0, 0],

@@ -1,8 +1,14 @@
+# Wrapper functions for Sudoku Extraction and Solver
+# Author: @narenderkumarnain
+
+
 from extractor import sudoku_extractor
 from solver import backtrack
 import time
 
 def solve(img_path):
+    # Path of the Tensorflow Digit Recognition Model
+    # Change this to your Requirements
     model_path = 'extractor/myModel.h5'
     start = time.time()
     board = sudoku_extractor.extract_sudoku(img_path , model_path)
@@ -22,10 +28,9 @@ def solve(img_path):
         print('not solvable')
         return False , board_list
     end2 = time.time()
-    print('Time: {} {} {}'.format(start , end1 , end2))
+    print('Time: {} {}'.format(end1 - start , end2 - start))
     return True , grid_res
-    # for i in range(9):
-    #     print(grid_res[i])
+
 
 #solve('examples/sudoku5.png')
 

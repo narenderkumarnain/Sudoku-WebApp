@@ -1,5 +1,8 @@
+# This script contains functions for conversion of sudoku grid to Styled HTML Tables
+# Author: @narenderkumarnain
 
-
+# ---------------------------------Functions for Styling ---------------------------------------------------------------
+#Conversion of Grid to Table with specific Colour
 def list_to_table(list_str , color_input):
     res = '<center><table style="border-collapse: collapse;border: 1px solid black;padding: 5px;">'
     for i in range(len(list_str)):
@@ -13,8 +16,9 @@ def list_to_table(list_str , color_input):
     res += '</table></center>'
     return res
 
+# Wrapper function for Decomposition and recombination of Sudoku Sub-grids
 def list_to_table_styled(grid):
-    # Mannual division of the 3*3 Grids
+    # Mannual division of the 3*3 Sub Grids
     grid1 = []
     grid1.append(
         [
@@ -91,7 +95,7 @@ def list_to_table_styled(grid):
     return main_res
 
 
-
+# ------------------------------ Code for Testing ----------------------------------------------------------------------
 # For testing the functions
 # sudo_input = []
 # for i in range(9):
