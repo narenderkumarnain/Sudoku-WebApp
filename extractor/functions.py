@@ -1,7 +1,7 @@
 # Helper Functions for Extractor
 import cv2
 import numpy as np
-import pytesseract
+#import pytesseract
 
 def preProcess(img):
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # CONVERT IMAGE TO GRAY SCALE
