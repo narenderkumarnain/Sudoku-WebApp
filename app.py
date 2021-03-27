@@ -4,7 +4,7 @@ import cv2
 #from PIL import Image
 import numpy
 import backend_wrapper
-from utils import list_to_table
+from utils import list_to_table , list_to_table_styled
 app = Flask(__name__)
 
 
@@ -44,7 +44,7 @@ def upload_file_1():
 		message = 'If you see Reds in the Solved Sudoku, we are sorry for failing You 😔'
 		if resbool == True:
 			message = 'Yes! we have solved it 😃 '
-		return render_template('result.html' , table = list_to_table(grid) , result = message)
+		return render_template('result.html' , table = list_to_table_styled(grid) , result = message)
 
 if __name__ == '__main__':
 	app.run()
