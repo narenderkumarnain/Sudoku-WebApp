@@ -1,2 +1,2 @@
 # Sudoku-WebApp
-sudoku solver web app
+https://sudoku-solver-nkn.herokuapp.com/
