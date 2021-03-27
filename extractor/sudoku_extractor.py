@@ -8,12 +8,12 @@ def intializePredectionModel(model_path):
     model = load_model(model_path)
     return model
 
-def extract_sudoku(img_path, model_path):
+def extract_sudoku(img, model_path):
     # input is the path to the image
     heightImg = 450
     widthImg = 450
     model = intializePredectionModel(model_path)
-    img = cv2.imread(img_path)
+    # img = cv2.imread(img_path)
     img = cv2.resize(img, (widthImg, heightImg))
     imgThreshold = preProcess(img)
 

@@ -8,7 +8,7 @@ def solve(img_path):
     board = sudoku_extractor.extract_sudoku(img_path , model_path)
     if(board == None):
         print('Sudoku not found')
-        return
+        return []
     end1 = time.time()
 
     board_list = []
@@ -20,11 +20,12 @@ def solve(img_path):
     grid_res = backtrack.sudoku_solver(board_list , 9)
     if(grid_res == None):
         print('not solvable')
-        return
+        return board_list
     end2 = time.time()
     print('Time: {} {} {}'.format(start , end1 , end2))
-    for i in range(9):
-        print(grid_res[i])
+    return grid_res
+    # for i in range(9):
+    #     print(grid_res[i])
 
-solve('examples/sudoku5.png')
+#solve('examples/sudoku5.png')
 
