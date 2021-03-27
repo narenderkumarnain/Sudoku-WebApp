@@ -7,17 +7,23 @@ import backend_wrapper
 from utils import list_to_table
 app = Flask(__name__)
 
+
+@app.route('/about')
+def about_site():
+	return render_template('about.html')
+
 @app.route('/')
 def upload_file():
 	return render_template('home.html')
 
-@app.route('/waiting')
-def waiting():
-	return render_template('wait.html')
 
-@app.route('/about')
-def waiting_1():
-	return render_template('about.html')
+# @app.route('/waiting')
+# def waiting():
+# 	return render_template('wait.html')
+
+# @app.route('/about')
+# def waiting_1():
+# 	return render_template('about.html')
 
 @app.route('/uploader' , methods = ['GET' , 'POST'])
 def upload_file_1():
@@ -41,4 +47,4 @@ def upload_file_1():
 		return render_template('result.html' , table = list_to_table(grid) , result = message)
 
 if __name__ == '__main__':
-	app.run()
+	app.run(debug = True)
