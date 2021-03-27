@@ -30,9 +30,7 @@
 </head>
 <body>
     <center>
-
-<!--        Header navbar section now-->
-            <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
               <!-- <a class="navbar-brand" href="#">Navbar</a> -->
               <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,33 +41,30 @@
 
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="align-content: center;">
                 <div class="navbar-nav navbar-center">
-                  <a class="nav-link active a-home" aria-current="page" href="#">Home</a>
-                  <a class="nav-link a-home" href={{ url_for('about') }}>About</a>
+                  <a class="nav-link active a-home" aria-current="page" href="{{ url_for('/') }}">Home</a>
+                  <a class="nav-link a-home" href="#">About</a>
 <!--                  <a class="nav-link a-home" href="#">Projects</a>-->
                   <!-- <a class="nav-link disabled a-home" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
                 </div>
               </div>
             </div>
           </nav>
-<!--        Header Navbar Ends -->
-        <br><br><br><br>
     <div class="container custom">
         <h1>Sudoku Solver Web App</h1>
     </div>
-    <div class="input-group mb-3 center_div custom">
-    <form action = "/uploader" method = "POST"
-         enctype = "multipart/form-data">
 
-          <input class="form-control" type = "file" name = "file" />
-<!--         <input type="file" name="file" accept="image/*" capture="camera">-->
-        <br>
-         <input class="btn btn-outline-secondary" type = "submit"/>
 
-      </form>
-    </div>
+<!--    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+        <div class="container">
+            <h3>How to use This?</h3>
+            <p>Select a Image using Choose File Section and Press Submit</p>
+            <h3>How we process this?</h3>
+            <p>We use OpenCV for extracting the Sudoku out of image, Tensorflow Model for Extracting the numeric digits out of it and Backtracking
+            Algorithm for Solving it!</p>
+            <h3>Why so many Failures?</h3>
+            <p>Usually our OpenCV pipeline is successfull in extracting the Sudoku but errors happen in Digit Recognition which leads to Unsolvable Sudoku!</p>
 
-    <br><br><br><br><br><br><br>
-
+        </div>
 
 
 

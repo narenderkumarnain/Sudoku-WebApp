@@ -15,6 +15,10 @@ def upload_file():
 def waiting():
 	return render_template('wait.html')
 
+@app.route('/about')
+def waiting_1():
+	return render_template('about.html')
+
 @app.route('/uploader' , methods = ['GET' , 'POST'])
 def upload_file_1():
 	if request.method == 'POST':
