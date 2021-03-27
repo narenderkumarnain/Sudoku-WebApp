@@ -1,6 +1,6 @@
 numpy
 gunicorn
-tensorflow
+tensorflow-cpu
 opencv-contrib-python-headless
 flask
 Pillow
